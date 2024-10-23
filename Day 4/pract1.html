@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1><br>
+    <form name="f1">
+        
+        Enter a number 1:<input type="number" id="n1"/><br><br>
+        Enter a number 2:<input type="number" id="n2"/><br><br>
+        <input type="button" value="add" onclick="add()"/>
+        <input type="button" value="sub" onclick="sub()"/>
+        <input type="button" value="mult" onclick="mult()"/>
+        <input type="button" value="div" onclick="div()"/>
+        <h2 id="ans">Result:</h2>
+
+        Enter the kilometer : <input type="text" name="km">
+        <input type="button" value="check km" onclick="kms()"/>
+        <h2 id="answer">Miles is</h2>
+
+        Enter the kilograms : <input type="text" name="kg">
+        <input type="button" value="check kg" onclick="kgs()"/>
+        <h2 id="answers">pounds is</h2>
+</form>
+</body>
+<script>
+    function add(){
+        console.log("hello world");
+        var a = parseInt(f1.n1.value);
+        // parseInt(document.getElementById("n1").value)
+        var b = parseInt(f1.n2.value);
+        var c = a+b;
+        console.log(c);
+        document.getElementById("ans").innerHTML="Result:"+c;
+    }
+    function sub(){
+        console.log("hello world");
+        var a = parseInt(f1.n1.value);
+        // parseInt(document.getElementById("n1").value)
+        var b = parseInt(f1.n2.value);
+        var c = a-b;
+        console.log(c);
+        document.getElementById("ans").innerHTML="Result:"+c;
+    }
+    function mult(){
+        console.log("hello world");
+        var a = parseInt(f1.n1.value);
+        // parseInt(document.getElementById("n1").value)
+        var b = parseInt(f1.n2.value);
+        var c = a*b;
+        console.log(c);
+        document.getElementById("ans").innerHTML="Result:"+c;
+    }
+    function div(){
+        console.log("hello world");
+        var a = parseInt(f1.n1.value);
+        // parseInt(document.getElementById("n1").value)
+        var b = parseInt(f1.n2.value);
+        var c = a/b;
+        console.log(c);
+        document.getElementById("ans").innerHTML="Result:"+c;
+    }
+
+    function kms(){
+        var k = parseInt(f1.km.value);
+        var miles= k*0.621;
+        document.getElementById("answer").innerHTML="Miles:"+miles;
+    }
+
+    function kgs(){
+        var k = parseInt(f1.kg.value);
+        var mile= k*2.2;
+        document.getElementById("answers").innerHTML="pounds is"+mile;
+    }
+
+</script>
+</html>
